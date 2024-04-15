@@ -9,6 +9,7 @@ import Order, { loader as orderLoader } from "./features/order/Order";
 import AppLayout from "./ui/AppLayout";
 import Error from "./ui/Error";
 import { action as updateOrderAction } from "./features/order/UpdateOrder";
+import Customize from "./ui/Customize";
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,7 @@ const router = createBrowserRouter([
         element: <CreateOrder />,
         action: createOrderAction,
       },
+    
       {
         path: "/order/:orderId",
         element: <Order />,
@@ -40,6 +42,17 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
+  const [ingredients, setIngredients] = useState({
+    basil: false,
+    cheese: false,
+    mushroom: false,
+    olive: false,
+    pineapple: false,
+    tomato: false,
+  });
+  {
+   path="/Customize", element ;  <Customize ingredients={ingredients} setIngredients={setIngredients}/> }
+
   return <RouterProvider router={router} />;
 }
 
