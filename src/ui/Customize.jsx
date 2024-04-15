@@ -20,8 +20,13 @@ export default function Customize({ ingredients, setIngredients }) {
   };
 
   return (
-    <div className="banner">
-      <img src={Banner} alt="Banner" className="bannerImage" />
+    <div className="banner" style={{ marginBottom: "20px" }}>
+      <img 
+        src={Banner} 
+        alt="Banner" 
+        className="bannerImage" 
+        style={{ width: "100%", height: "auto", objectFit: "cover" }} 
+      />
       <div style={{ display: "flex" }}>
         <div style={{ flex: 1, padding: 0, position: "relative" }}>
           <img src={Base} alt="Pizza Base" height="100%" width="100%" style={{ position: "absolute", zIndex: 0, marginRight: "20%" }} />

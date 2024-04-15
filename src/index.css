@@ -3,6 +3,16 @@
 @tailwind utilities;
 
 @layer components {
+  .responsive-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .max-w-banner {
+    max-width: 100%;
+    height: auto;
+  }
   .input {
     @apply rounded-full
     border border-stone-200 px-4
@@ -36,4 +46,43 @@
       background-position: 0% 50%, 50% 50%, 100% 100%;
     }
   }
+}
+@layer utilities {
+  /* Example utility classes for image responsiveness */
+  .w-full {
+    width: 100%;
+  }
+
+  .h-full {
+    height: auto;
+  }
+
+  .object-cover {
+    object-fit: cover;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.main-heading {
+  margin-bottom: 20px;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #4A4A4A;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.sub-heading {
+  color: #FFC107;
+  font-size: 1.5rem;
+  animation: fadeInUp 1s ease-in-out 0.5s;
 }
